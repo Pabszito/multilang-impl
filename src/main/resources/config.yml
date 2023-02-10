@@ -1,0 +1,4 @@
+config:
+  allowed-languages:
+    - "en-US"
+    - "es-ES"
