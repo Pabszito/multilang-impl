@@ -4,6 +4,8 @@ import com.comugamers.i18n.MultiLangPlugin;
 import com.comugamers.i18n.inject.commands.CommandModule;
 import com.comugamers.i18n.inject.file.FileModule;
 import com.comugamers.i18n.inject.listener.ListenerModule;
+import com.comugamers.i18n.inject.message.MessageModule;
+import com.comugamers.i18n.inject.service.ServiceModule;
 import org.bukkit.plugin.Plugin;
 import team.unnamed.inject.AbstractModule;
 
@@ -25,5 +27,7 @@ public class MultiLangModule extends AbstractModule {
         install(new FileModule());
         install(new CommandModule());
         install(new ListenerModule());
+        install(new ServiceModule());
+        install(new MessageModule());
     }
 }

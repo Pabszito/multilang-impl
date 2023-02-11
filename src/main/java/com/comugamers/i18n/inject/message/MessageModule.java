@@ -9,6 +9,7 @@ import me.yushust.message.source.MessageSource;
 import me.yushust.message.source.MessageSourceDecorator;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
+import team.unnamed.inject.AbstractModule;
 import team.unnamed.inject.Provides;
 
 import javax.inject.Singleton;
@@ -16,7 +17,7 @@ import java.util.List;
 
 import static me.yushust.message.bukkit.BukkitMessageAdapt.newYamlSource;
 
-public class MessageModule {
+public class MessageModule extends AbstractModule {
 
     @Singleton
     @Provides

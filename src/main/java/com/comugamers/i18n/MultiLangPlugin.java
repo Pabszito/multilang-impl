@@ -24,7 +24,9 @@ public class MultiLangPlugin extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // Stop the main service
-        service.stop();
+        if (service != null) {
+            // Stop the main service
+            service.stop();
+        }
     }
 }

@@ -7,24 +7,7 @@ plugins {
 }
 
 group = "com.comugamers"
-version = "1.0-SNAPSHOT"
-
-tasks {
-    shadowJar {
-        archiveBaseName.set(rootProject.name)
-        archiveClassifier.set("")
-
-        val pkg = "com.comugamers.i18n.internal"
-
-        relocate("dev.triumphteam", "$pkg.triumphteam")
-        relocate("me.yushust", "$pkg.yushust")
-        relocate("team.unnamed", "$pkg.unnamed")
-    }
-
-    named<DefaultTask>("build") {
-        dependsOn("shadowJar")
-    }
-}
+version = findProperty("version").toString()
 
 publishing {
     publications {
@@ -58,6 +41,25 @@ dependencies {
     // dependencies required during testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+}
+
+tasks {
+    shadowJar {
+        archiveBaseName.set(rootProject.name)
+        archiveClassifier.set("")
+
+        val pkg = "com.comugamers.i18n.internal"
+
+        relocate("dev.triumphteam", "$pkg.triumphteam")
+        relocate("me.yushust", "$pkg.yushust")
+        relocate("team.unnamed", "$pkg.unnamed")
+
+        archiveFileName.set("multilang-impl.jar")
+    }
+
+    named<DefaultTask>("build") {
+        dependsOn("shadowJar")
+    }
 }
 
 tasks.getByName<Test>("test") {
