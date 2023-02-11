@@ -4,6 +4,7 @@ import com.comugamers.i18n.service.Service;
 import com.comugamers.i18n.service.command.CommandService;
 import com.comugamers.i18n.service.listener.ListenerService;
 import com.comugamers.i18n.service.main.MainService;
+import com.comugamers.i18n.service.placeholder.PlaceholderService;
 import team.unnamed.inject.AbstractModule;
 
 public class ServiceModule extends AbstractModule {
@@ -22,6 +23,11 @@ public class ServiceModule extends AbstractModule {
         this.bind(Service.class)
                 .named("listener")
                 .to(ListenerService.class)
+                .singleton();
+
+        this.bind(Service.class)
+                .named("placeholder")
+                .to(PlaceholderService.class)
                 .singleton();
     }
 }

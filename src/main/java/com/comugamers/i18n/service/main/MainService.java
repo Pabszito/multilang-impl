@@ -15,12 +15,15 @@ public class MainService implements Service {
     @Inject @Named("listener")
     private Service listenerService;
 
+    @Inject @Named("placeholder")
+    private Service placeholderService;
+
     @Inject
     private Plugin plugin;
 
     @Override
     public void start() {
-        startMany(commandService, listenerService);
+        startMany(commandService, listenerService, placeholderService);
 
         // Send onEnable message
         plugin.getLogger().info("MultiLangImpl has been enabled!");

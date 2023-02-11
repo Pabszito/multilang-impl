@@ -2,6 +2,7 @@ package com.comugamers.i18n.inject.commands;
 
 import com.comugamers.i18n.commands.MainCommand;
 import com.comugamers.i18n.commands.subcommand.ReloadSubCommand;
+import com.comugamers.i18n.commands.subcommand.TestSubCommand;
 import dev.triumphteam.cmd.bukkit.BukkitCommandManager;
 import dev.triumphteam.cmd.core.BaseCommand;
 import org.bukkit.command.CommandSender;
@@ -25,6 +26,7 @@ public class CommandModule extends AbstractModule {
                 .asSet()
                 .to(MainCommand.class)
                 .to(ReloadSubCommand.class)
+                .to(TestSubCommand.class)
                 .singleton();
     }
 }

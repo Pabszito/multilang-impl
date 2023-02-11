@@ -1,5 +1,6 @@
 config:
   fallback: "en-US"
+  apply-placeholders: true
   interceptors:
     colorize: true
   allowed-languages:

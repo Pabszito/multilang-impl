@@ -29,4 +29,10 @@ public class MultiLangPlugin extends JavaPlugin {
             service.stop();
         }
     }
+
+    public void debug(String str) {
+        if (Boolean.getBoolean("mutilang-impl.debug")) {
+            getLogger().info("[DEBUG] " + str);
+        }
+    }
 }
