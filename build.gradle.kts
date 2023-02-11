@@ -13,6 +13,12 @@ tasks {
     shadowJar {
         archiveBaseName.set(rootProject.name)
         archiveClassifier.set("")
+
+        val pkg = "com.comugamers.i18n.internal"
+
+        relocate("dev.triumphteam", "$pkg.triumphteam")
+        relocate("me.yushust", "$pkg.yushust")
+        relocate("team.unnamed", "$pkg.unnamed")
     }
 
     named<DefaultTask>("build") {
@@ -35,6 +41,7 @@ repositories {
     maven("https://repo.unnamed.team/repository/unnamed-public/")
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
+    maven("https://repo.triumphteam.dev/snapshots/")
 }
 
 dependencies {
@@ -46,6 +53,7 @@ dependencies {
     implementation("team.unnamed:inject:1.0.1")
     implementation("me.yushust.message:core:7.1.0")
     implementation("me.yushust.message:sourcetype-bukkit-yml:7.1.0")
+    implementation("dev.triumphteam:triumph-cmd-bukkit:2.0.0-SNAPSHOT")
 
     // dependencies required during testing
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")

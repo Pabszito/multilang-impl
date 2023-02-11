@@ -1,4 +1,9 @@
 config:
+  fallback: "en-US"
+  interceptors:
+    colorize: true
   allowed-languages:
-    - "en-US"
-    - "es-ES"
+    replace-unknown-with-fallback: true
+    list:
+      - "en-US"
+      - "es-ES"

@@ -1,0 +1,16 @@
+language:
+  command:
+    player-only: "&4&l>> &cEste comando solo puede ser ejecutado por jugadores."
+    console-only: "&4&l>> &cEste comando solo puede ser ejecutado por la consola del servidor."
+    too-many-arguments: "&4&l>> &cHas proporcionado demasiados argumentos!"
+    not-enough-arguments: "&4&l>> &cNo has proporcionado los argumentos necesarios!"
+    invalid-argument: "&4&l>> &cUso invalido del comando!"
+    no-permission: "&4&l>> &cNo tienes permisos para ejecutar ese comando."
+    info: |-
+      &2&lLENGUAJE &8» &fEjecutando &a%pluginName% &fversion &a%pluginVersion%&f.
+      &2&lLENGUAJE &8» &fHecho por &aPabszito &fusando &anmessage&f.
+    reloaded: "&2&lLANGUAGE &8» &fConfiguracion recargada. Para mostrar cambios en los archivos de lenguaje, por favor reinicia el servidor."
+    language-set: "&aHas cambiado tu lenguaje de preferencia a &6Español&a."
+
+translations:
+  example: "Hola mundo!"

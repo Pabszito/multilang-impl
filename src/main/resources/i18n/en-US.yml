@@ -1,0 +1,16 @@
+language:
+  command:
+    player-only: "&4&l>> &cThis command can only be ran by players."
+    console-only: "&4&l>> &cThis command can only be ran by the server console."
+    too-many-arguments: "&4&l>> &cToo many arguments were provided!"
+    not-enough-arguments: "&4&l>> &cNot enough arguments were provided!"
+    invalid-argument: "&4&l>> &cInvalid command usage!"
+    no-permission: "&4&l>> &cYou don't have enough permissions to run that command."
+    info: |-
+      &2&lLANGUAGE &8» &fRunning &a%pluginName% &fversion &a%pluginVersion%&f.
+      &2&lLANGUAGE &8» &fMade by &aPabszito &fusing &anmessage&f.
+    reloaded: "&2&lLANGUAGE &8» &fSettings reloaded. To display language files changes, please restart the server."
+    language-set: "&aPreferred language set to &6English&a."
+
+translations:
+  example: "Hello world!"
